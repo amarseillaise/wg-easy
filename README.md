@@ -1,11 +1,5 @@
 # WireGuard Easy
 
-[![Build & Publish Docker Image to Docker Hub](https://github.com/wg-easy/wg-easy/actions/workflows/deploy.yml/badge.svg?branch=production)](https://github.com/wg-easy/wg-easy/actions/workflows/deploy.yml)
-[![Lint](https://github.com/wg-easy/wg-easy/actions/workflows/lint.yml/badge.svg?branch=master)](https://github.com/wg-easy/wg-easy/actions/workflows/lint.yml)
-![Docker](https://img.shields.io/docker/pulls/weejewel/wg-easy.svg)
-[![Sponsor](https://img.shields.io/github/sponsors/weejewel)](https://github.com/sponsors/WeeJeWel)
-![GitHub Stars](https://img.shields.io/github/stars/wg-easy/wg-easy)
-
 You have found the easiest way to install & manage WireGuard on any Linux host!
 
 <p align="center">
@@ -24,6 +18,7 @@ You have found the easiest way to install & manage WireGuard on any Linux host!
 * Automatic Light / Dark Mode
 * Multilanguage Support
 * UI_TRAFFIC_STATS (default off)
+* `Enabled until feature (the only difference from the original repository)`
 
 ## Requirements
 
@@ -75,7 +70,7 @@ To automatically install & run wg-easy, simply run:
   --sysctl="net.ipv4.conf.all.src_valid_mark=1" \
   --sysctl="net.ipv4.ip_forward=1" \
   --restart unless-stopped \
-  ghcr.io/wg-easy/wg-easy
+  docker pull ghcr.io/amarseillaise/wg-easy-amars
 ```
 
 > 💡 Replace `YOUR_SERVER_IP` with your WAN IP, or a Dynamic DNS hostname.
@@ -130,7 +125,7 @@ To update to the latest version, simply run:
 ```bash
 docker stop wg-easy
 docker rm wg-easy
-docker pull ghcr.io/wg-easy/wg-easy
+docker pull docker pull ghcr.io/amarseillaise/wg-easy-amars
 ```
 
 And then run the `docker run -d \ ...` command above again.
